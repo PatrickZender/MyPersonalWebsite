@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -124,6 +126,68 @@
       }
 
       /*--- Default CSS Above /\ --- */
+      input[type="text"] {
+        box-sizing: border-box;
+        padding: 30px 30px;
+        margin: 8px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        text-align: left;
+        color: #12343b;
+      }
+      .formcontainer {
+        background-color: #2d545e;
+        margin: 1em;
+        padding: 1em;
+        position: relative;
+        text-align: left;
+        font-size: 1.2em;
+        width: fit-content;
+      }
+
+      h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        text-align: left;
+        color: white;
+      }
+
+      #submit {
+        background-color: #12343b;
+        color: white;
+        cursor: pointer;
+        padding: 10px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+      }
+      #subject {
+        background-color: #12343b;
+        color: white;
+        cursor: pointer;
+        padding: 5px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+      }
+      #selectionbubbles {
+        color: white;
+        cursor: pointer;
+        padding: 5px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+      }
+
+      .row {
+        box-sizing: border-box;
+        display: flex;
+      }
+
+      /* Create two equal columns that sits next to each other */
+      .column {
+        flex: 50%;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
@@ -142,9 +206,83 @@
         <a href="faqs.html">&nbsp FAQs &nbsp</a>
       </div>
     </div>
+    <hr />
+    <!-- Grid used below \/ -->
+    <div class="row">
+      <div class="columnone" style="background-color: #c89666">
+        <h1>Questions or Comments? Contact Us!</h1>
+        <!-- Form used Below \/ -->
+        <div class="formcontainer">
+          <div>
+            <h3>First Name:</h3>
+            <input type="text" placeholder="Enter your first name." size="30" />
+          </div>
+          <div>
+            <h3>Last Name:</h3>
+            <input type="text" placeholder="Enter your last name." size="30" />
+          </div>
+          <div>
+            <h3>Email:</h3>
+            <input
+              type="text"
+              placeholder="Enter your e-mail address."
+              size="30"
+            />
+          </div>
 
-    <p>TEXT CONTENT HERE</p>
+          <div>
+            <h3>Are you an existing client?</h3>
+            <div id="selectionbubbles">
+              <label
+                ><input
+                  type="radio"
+                  name="existingclient"
+                  value="yes"
+                />Yes</label
+              >
+              <label
+                ><input type="radio" name="notaclient" value="no" />No</label
+              >
+            </div>
+          </div>
 
+          <div>
+            <h3>Subject:</h3>
+            <div>
+              <select name="subject" id="subject">
+                <option value="selecthere">Select Here</option>
+                <option value="question">Question</option>
+                <option value="quote">Get a quote</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <h3>Enter Your Comment Below:</h3>
+            <div>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                cols="60"
+                placeholder="Enter your comment here."
+              ></textarea>
+            </div>
+          </div>
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+      <div class="column" style="background-color: #e1b382">
+        <div class="columntwo">
+          <h1>FAQs</h1>
+          <p>Q1: __? &nbsp &nbsp &nbsp A: ___.</p>
+          <p>Q2: __? &nbsp &nbsp &nbsp A: ___.</p>
+        </div>
+      </div>
+    </div>
+    <hr />
     <div class="bottomlinks">
       <a href="index.html">&nbsp Home &nbsp</a>
       <a href="sitemap.html">&nbsp Sitemap &nbsp</a>
