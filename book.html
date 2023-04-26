@@ -125,8 +125,37 @@
       }
 
       /*--- Default CSS Above /\ --- */
+
+      .booking-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 1em;
+      }
+
+      .booking-form input,
+      .booking-form button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .booking-form button {
+        background-color: #12343b;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .booking-form button:hover {
+        background-color: #2d545e;
+      }
+
     </style>
   </head>
+
   <body>
     <div id="navbar">
       <a href="index.html">
@@ -144,7 +173,15 @@
       </div>
     </div>
 
-    <p>TEXT CONTENT HERE</p>
+    <h1>Schedule a Consultation</h1>
+
+    <p>Let's book an appointment to see if you are a good fit for my services:</p>
+
+    <form class="booking-form" action="your-booking-script-url" method="post">
+      <input type="datetime-local" name="appointment" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <button type="submit">Schedule Appointment</button>
+    </form>
 
     <div class="bottomlinks">
       <a href="index.html">&nbsp Home &nbsp</a>
