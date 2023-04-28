@@ -144,6 +144,32 @@
       }
 
       /*--- Default CSS Above /\ --- */
+
+  /* Slideshow CSS */
+  .slideshow-container {
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+      }
+
+      .slideshow-comment {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 1s;
+        font-size: 1.2em;
+      }
+
+      .slideshow-comment.active {
+        display: block;
+        opacity: 1;
+        transition: opacity 1s;
+      }
+
+
     </style>
   </head>
   <body>
@@ -181,36 +207,66 @@
 
 <br>
 
-    <h2>What other clients have said...</h2>
-    <ul>
-      <li>"Patrick's insights and strategies transformed our company's performance. Highly recommended!" - John Smith, CEO, TechCorp</li>
-   <br>  
-      <li>"Our productivity skyrocketed after implementing Patrick's recommendations. A true game changer!" - Jane Brown, COO, NextGen Solutions</li>
-      <br> 
-      <li>"Working with Patrick was a pleasure. His expertise helped us overcome some significant challenges." - Mark Johnson, CFO, Innovate Inc.</li>
-      <br> 
-      <li>"Patrick's in-depth analysis of our operations led to substantial cost savings and efficiency improvements." - Laura Davis, CTO, GreenTech</li>
-      <br> 
-      <li>"We achieved record-breaking revenue growth after partnering with Patrick. He's a true professional!" - David Wilson, CEO, Growth Agency</li>
-      <br> 
-      <li>"The strategies and tactics Patrick provided enabled us to significantly improve our employee engagement and retention." - Susan Clark, HR Director, OmniGlobal</li>
-      <br> 
-      <li>"Patrick's innovative approach to problem-solving has been invaluable to our organization's success." - Peter Thompson, President, Thompson Industries</li>
-      <br> 
-      <li>"I couldn't be happier with the results of our collaboration. Patrick is an exceptional consultant!" - Emily White, CEO, E-Commerce Empire</li>
-      <br> 
-      <li>"Patrick's ability to analyze and optimize our processes has made a tremendous impact on our bottom line." - Kevin Martinez, COO, Digital World</li>
-      <br> 
-      <li>"Our company has seen continuous growth and improvement since we started working with Patrick. Highly recommended!" - Lisa King, CEO, King Solutions</li>
-    </ul>
 
+
+<h2>What other clients have said...</h2>
+<div class="slideshow-container">
+  <div class="slideshow-comment">
+    "Patrick's insights and strategies transformed our company's performance. Highly recommended!" - John Smith, CEO, TechCorp
+  </div>
+  <div class="slideshow-comment">
+    "Our productivity skyrocketed after implementing Patrick's recommendations. A true game changer!" - Jane Brown, COO, NextGen Solutions
+  </div>
+  <div class="slideshow-comment">
+    "Working with Patrick was a pleasure. His expertise helped us overcome some significant challenges." - Mark Johnson, CFO, Innovate Inc.
+  </div>
+  <div class="slideshow-comment">
+    "Patrick's in-depth analysis of our operations led to substantial cost savings and efficiency improvements." - Laura Davis, CTO, GreenTech
+  </div>
+  <div class="slideshow-comment">
+    "We achieved record-breaking revenue growth after partnering with Patrick. He's a true professional!" - David Wilson, CEO, Growth Agency
+  </div>
+  <div class="slideshow-comment">
+    "The strategies and tactics Patrick provided enabled us to significantly improve our employee engagement and retention." - Susan Clark, HR Director, OmniGlobal
+  </div>
+  <div class="slideshow-comment">
+    "Patrick's innovative approach to problem-solving has been invaluable to our organization's success." - Peter Thompson, President, Thompson Industries
+  </div>
+  <div class="slideshow-comment">
+    "I couldn't be happier with the results of our collaboration. Patrick is an exceptional consultant!" - Emily White, CEO, E-Commerce Empire
+  </div>
+  <div class="slideshow-comment">
+    "Patrick's ability to analyze and optimize our processes has made a tremendous impact on our bottom line." - Kevin Martinez, COO, Digital World
+  </div>
+  <div class="slideshow-comment">
+    "Our company has seen continuous growth and improvement since we started working with Patrick. Highly recommended!" - Lisa King, CEO, King Solutions
+  </div>
+
+<br><br><br><br><br><br><br>
 
     <div class="bottomlinks">
       <a href="index.html">&nbsp Home &nbsp</a>
       <a href="sitemap.html">&nbsp Sitemap &nbsp</a>
       <a href="faqs.html">&nbsp Connect With Me &nbsp</a>
     </div>
-
     <p id="copyright">Patrick Zender 2023 ©</p>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slideshow-comment");
+        slideshow();
+  
+        function slideshow() {
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].classList.add("active");
+          setTimeout(slideshow, 5000); // Change slide every 5 seconds
+        }
+      </script>
   </body>
 </html>

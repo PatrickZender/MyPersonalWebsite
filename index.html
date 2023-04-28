@@ -78,14 +78,23 @@
         color: white;
         cursor: pointer;
       }
-      #logo {
-        border: none;
+
+      .welcomeLink {
+        text-align: center;
+        display: block;
+        color: #2d545e;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        text-decoration: underline;
         cursor: pointer;
-        padding-bottom: 15px;
-        height: 89px;
-        width: 250px;
-        margin: 1em;
-        display: inline-block;
+        margin-top: 1em;
+      }
+
+      @keyframes colorChange {
+        0% { color: #3986af; }
+        50% { color: #1b3ecd; }
+        50% { color: #8225d2; }
+      
       }
 
       /* Bottom of page */
@@ -131,9 +140,33 @@
       }
 
       img {
-        height: 60%;
-        width: 60%;
+        height: 600px;
+        width: 800px;
       }
+
+      #welcomeMessage {
+        display: none;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.4em;
+        color: #12343b;
+        margin-top: 1em;
+      }
+
+      #title:hover {
+        animation: colorChange 1s infinite;
+    }
+
+      #logo {
+        border: none;
+        cursor: pointer;
+        padding-bottom: 15px;
+        height: 89px;
+        width: 250px;
+        margin: 1em;
+        display: inline-block;
+      }
+
     </style>
   </head>
   <body>
@@ -159,8 +192,13 @@
         title="consulting"
       />
     </div>
+
+    <p class="welcomeLink" onclick="displayWelcomeMessage()">Click for a revelation...</p>
+    <p id="welcomeMessage">Welcome to my consulting services page. See those beatings in my name below? They represent your businesse's healthy heartbeat after working with me. Don't believe me? Look around my page and see for yourself.</p>
+    <h1 id="title" onmouseover="changeTitleColor()" onmouseout="resetTitleColor()">Patrick Zender Consulting</h1>
+
     <p>
-      Welcome to my website! As a consultant, I help businesses of all sizes and
+      As a consultant, I help businesses of all sizes and
       industries overcome challenges, seize opportunities, and achieve their
       goals. With years of experience working with clients across various
       sectors, I bring a unique perspective and a wealth of expertise to every
@@ -179,5 +217,12 @@
     </div>
 
     <p id="copyright">Patrick Zender 2023 ©</p>
+
+    <script>
+     function displayWelcomeMessage() {
+      const welcomeMessage = document.getElementById("welcomeMessage");
+      welcomeMessage.style.display = "block";
+    }
+    </script>
   </body>
 </html>
