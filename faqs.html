@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -125,7 +124,7 @@
         color: white;
       }
 
-      /*--- Default CSS Above /\ --- */
+  
       input[type="text"] {
         box-sizing: border-box;
         padding: 30px 30px;
@@ -183,7 +182,7 @@
         display: flex;
       }
 
-      /* Create two equal columns that sits next to each other */
+      /* To make columns sit next to each other */
       .column {
         flex: 50%;
         padding: 10px;
@@ -198,6 +197,49 @@
         height: 400px;
         width: 500px;
       }
+
+    /* Mobile Compatibility */
+ @media (max-width: 770px) {
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    flex: 100%;
+  }
+  .navbar a, .bottomlinks a {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin: 0.5em;
+  }
+  #logo {
+    height: 70px;
+    width: 200px;
+  }
+  img {
+    height: 250px;
+    width: 300px;
+  }
+  h1, p, h3 {
+    font-size: 1em;
+  }
+  input[type="text"] {
+    font-size: 1em;
+    padding: 15px 15px;
+  }
+  #submit {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  #subject, #selectionbubbles {
+    font-size: 1em;
+    padding: 2px 2px;
+  }
+  textarea {
+    font-size: 1em;
+  }
+}
     </style>
   </head>
   <body>

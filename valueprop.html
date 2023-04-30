@@ -143,9 +143,8 @@
         color: white;
       }
 
-      /*--- Default CSS Above /\ --- */
 
-  /* Slideshow CSS */
+  /* Slideshow CSS for my track record as a consultant */
   .slideshow-container {
         max-width: 800px;
         position: relative;
@@ -169,7 +168,41 @@
         transition: opacity 1s;
       }
 
-
+/* Mobile Compatibility */
+@media (max-width: 770px) {
+  p {
+    font-size: 1em;
+    text-indent: 2%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  .navbar a {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin: 0.5em;
+  }
+  #logo {
+    height: 60px;
+    width: 175px;
+    margin: 0.5em;
+  }
+  img {
+    height: 200px;
+    width: 400px;
+  }
+  .bottomlinks a {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin: 0.5em;
+  }
+  #copyright {
+    font-size: 1em;
+  }
+}
     </style>
   </head>
   <body>
@@ -204,11 +237,7 @@
       My value proposition is centered on delivering customized, results-driven strategies to foster innovation, increase operational efficiency, and enhance employee engagement. With a keen understanding of the ever-changing business landscape, I leverage cutting-edge technology and industry best practices to ensure your organization stays ahead of the curve.
       Together, we will build a strong foundation for your business, enabling you to scale effectively and navigate the complexities of the modern marketplace. By entrusting your business to me, you not only invest in your organization's success but also in a partnership dedicated to unlocking your business's true potential.
     </p>
-
 <br>
-
-
-
 <h2>What other clients have said...</h2>
 <div class="slideshow-container">
   <div class="slideshow-comment">
@@ -265,7 +294,7 @@
             slideIndex = 1;
           }
           slides[slideIndex - 1].classList.add("active");
-          setTimeout(slideshow, 5000); // Change slide every 5 seconds
+          setTimeout(slideshow, 5000); // Set to change track record comments every 5 seconds. 
         }
       </script>
   </body>

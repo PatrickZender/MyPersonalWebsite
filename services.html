@@ -124,7 +124,7 @@
         color: white;
       }
 
-      /*--- Default CSS Above /\ --- */
+      
       #video {
         margin: 1em;
         display: flex;
@@ -146,6 +146,57 @@
         width: auto;
         color: #12343b;
       }
+
+/* Mobile Compatibility */
+      @media (max-width: 770px) {
+  body {
+    margin: 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin: 0.5em;
+  }
+
+  .bottomlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottomlinks a {
+    font-size: 1em;
+    padding: 5px 5px;
+    margin: 0.5em;
+  }
+
+  #logo {
+    height: 60px;
+    width: 170px;
+    margin: 0.5em;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  p, ol {
+    font-size: 1em;
+    text-indent: 0;
+  }
+
+  #video iframe {
+    width: 100%;
+    height: auto;
+  }
+}
     </style>
   </head>
   <body>
